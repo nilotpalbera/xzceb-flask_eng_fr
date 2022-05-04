@@ -18,12 +18,12 @@ class TEST_TRANSLATION(unittest.TestCase):
         except ValueError as err:
             print(err)
 
-        #Hello and Bonjour
+        #en-fr, Hello and Bonjour
         self.assertEqual(englishToFrench('Hello'), 'Bonjour')
         self.assertNotEqual(englishToFrench('Bonjour'), 'Hello')
 
-        
-
-
+        #fr-en, Hello and Bonjour
+        self.assertEqual(frenchToEnglish('Bonjour'), 'Hello')
+        self.assertNotEqual(frenchToEnglish('Hello'), 'Bonjour')
 
 unittest.main()
